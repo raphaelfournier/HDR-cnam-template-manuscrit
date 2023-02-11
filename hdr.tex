@@ -1,0 +1,41 @@
+% <<< Preambule
+%\RequirePackage{snapshot} % for bundledoc
+\documentclass[a4paper,12pt,twoside]{StyleThese}
+\input{preamble/packages.input.tex}
+\input{preamble/newcommands.input.tex}
+\input{preamble/definitions.input.tex}
+\input{preamble/layout.input.tex}
+
+\let\chaptertitle=\chapter
+\let\introformatting=\relax
+\let\outroformatting=\relax
+% >>>
+
+\begin{document}
+
+% <<< Début
+\input{Chapters/titlepage.tex}
+\subfile{Chapters/remerciements.tex}
+\blankpage
+\input{Chapters/toc.tex}
+% >>>
+
+% <<< Chapitres
+\subfile{Chapters/introduction.tex}
+\subfile{Chapters/conclusion.tex}
+% >>>
+
+% <<< Annexes
+\appendix
+\appendixpage
+\addappheadtotoc
+\input{Appendices/bibliography}
+% >>> 
+
+% <<< Résumés
+\input{Appendices/resume-fr.tex}
+\input{Appendices/resume-en.tex}
+% >>>
+
+\end{document}
+% vim: set fdm=marker fmr=<<<,>>> fdl=0:fdc=2

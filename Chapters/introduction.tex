@@ -1,0 +1,28 @@
+\documentclass[../these.tex]{subfiles}
+
+\begin{document}
+
+\chapter{Introduction}
+\label{chap:introduction}
+
+\ifSubfilesClassLoaded{% subfile branch
+  \tableofcontents
+}{% main branch
+  \minitoc
+}
+\vskip2cm
+
+\lettrine{D}{ans cette HDR}, nous avons \\
+
+\section{foobar }
+Vivamus ac risus. Mauris ac pede laoreet felis pharetra ultricies. Proin et
+neque. 
+
+\ifSubfilesClassLoaded{% subfile branch
+\printbibliography
+}{% main branch
+  \vskip2cm
+  Pas de biblio ici
+}
+
+\end{document}
